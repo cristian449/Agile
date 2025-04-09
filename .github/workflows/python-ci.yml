@@ -1,0 +1,22 @@
+name: python-ci
+
+on: [push]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Koodi allalaadimine
+        uses: actions/checkout@v2
+
+      - name: Python'i installeerimine
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.5
+
+      - name: installida dependencies
+        run: pip install pytest
+
+      - name: Testide käivitamine
+        run: pytest
