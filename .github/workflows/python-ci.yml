@@ -15,8 +15,8 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: installida dependencies
+      - name: installida sõltuvused
         run: pip install pytest
 
-      - name: Testide käivitamine
+      - name: käivitada testid
         run: pytest
